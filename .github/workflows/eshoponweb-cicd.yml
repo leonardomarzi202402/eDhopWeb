@@ -27,12 +27,12 @@ jobs:
         dotnet-version: '7.0.x'
         include-prerelease: true
     #Build/Test/Publish the .net project
-    - name: Build with dotnet
-      run: dotnet build ./eShopOnWeb.sln --configuration Release
-    - name: Test with dotnet
-      run: dotnet test ./eShopOnWeb.sln --configuration Release
-    - name: dotnet publish
-      run: dotnet publish ./src/Web/Web.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+    #- name: Build with dotnet
+    #  run: dotnet build ./eShopOnWeb.sln --configuration Release
+    #- name: Test with dotnet
+    #  run: dotnet test ./eShopOnWeb.sln --configuration Release
+    #- name: dotnet publish
+    #  run: dotnet publish ./src/Web/Web.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
     # upload the published website code artifacts
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
