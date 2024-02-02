@@ -16,6 +16,7 @@ jobs:
   #Build, test and publish .net web project in repository
   buildandtest:
     runs-on: ubuntu-latest
+    environment: uno
     steps:
     #checkout the repository
     - uses: actions/checkout@v2
